@@ -1,0 +1,7 @@
+Prezado ${cliente},
+
+A mensalidade desse mês já foi emitida com vencimento para o dia $data no valor de $valor. Caso deseje cancelar sua
+assinatura, entre em contato pelo e-mail $email ou telefone $telefone.
+
+Atenciosamente,
+$empresa

@@ -1,0 +1,20 @@
+import enum
+
+direcoes = enum.Enum('Direções', ['ESQUERDA', 'DIREITA', 'CIMA', 'BAIXO'])
+
+print(direcoes.ESQUERDA, direcoes['ESQUERDA'], direcoes(1))
+print(direcoes.DIREITA)
+print(direcoes.CIMA)
+print(direcoes.BAIXO)
+print()
+print(direcoes.ESQUERDA.name)
+print(direcoes.ESQUERDA.value)
+print()
+print(direcoes['DIREITA'].name)
+print(direcoes['DIREITA'].value)
+print()
+print(direcoes(3).name)
+print(direcoes(3).value)
+print()
+print(direcoes(4).name)
+print(direcoes(4).value)

@@ -1,0 +1,58 @@
+[
+  {
+    "510.644.118-86": {
+      "nome": "Mateus Schmidt Mesquita",
+      "data_nascimento": "06/07/2000",
+      "numero_telefone": "19996643836",
+      "email": "mateussmesquita@gmail.com",
+      "agencia": "0191",
+      "numero_conta": "48959745-7",
+      "saldo_corrente": 7192.0,
+      "saldo_poupanca": 976.0,
+      "data_criacao_conta": "14/03/2025"
+    },
+    "senha": "123456A!"
+  },
+  {
+    "111.111.111-11": {
+      "nome": "Qwewqewqeqw",
+      "data_nascimento": "01/01/2000",
+      "numero_telefone": "19996643830",
+      "email": "3434uhuh@ewe.wewew",
+      "agencia": "1012",
+      "numero_conta": "91655858-3",
+      "saldo_corrente": 100.92,
+      "saldo_poupanca": 0,
+      "data_criacao_conta": "26/03/2025"
+    },
+    "senha": "123456A!"
+  },
+  {
+    "123.456.789-12": {
+      "nome": "Marcinha",
+      "data_nascimento": "21/12/1962",
+      "numero_telefone": "19958541718",
+      "email": "marcinha@gmail.com",
+      "agencia": "2865",
+      "numero_conta": "68567741-2",
+      "saldo_corrente": 0,
+      "saldo_poupanca": 0,
+      "data_criacao_conta": "01/04/2025"
+    },
+    "senha": "123456A!"
+  },
+  {
+    "078.792.868-29": {
+      "nome": "Papis",
+      "data_nascimento": "20/05/1961",
+      "numero_telefone": "99999999999",
+      "email": "papis@gmail.com",
+      "agencia": "3377",
+      "numero_conta": "55151653-8",
+      "saldo_corrente": 0,
+      "saldo_poupanca": 0,
+      "data_criacao_conta": "08/04/2025"
+    },
+    "senha": "h1m?EV|@"
+  }
+]
