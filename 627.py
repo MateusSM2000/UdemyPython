@@ -1,4 +1,4 @@
-#esse design pattern (memento) permite com q vc salve os atributos de um objeto fazendo um objeto da classe memento receber seus atributos
+#esse design pattern (memento) permite q vc salve os atributos de um objeto, podendo voltar esse objeto a estados anteriores
 
 from __future__ import annotations
 
@@ -26,13 +26,50 @@ class ImageEditor:
     def restore(self, memento: Memento):
         self.__dict__ = memento.get_state()
 
+    def __repr__(self):
+        return f'{self.__dict__}'
+
+
+class Caretaker:
+    def __init__(self, originator: ImageEditor):
+        self._originator = originator
+        self._mementos: list[Memento] = []
+
+    def backup(self) -> None:
+        self._mementos.append(self._originator.save_state())
+
+    def restore(self) -> None:
+        if not self._mementos:
+            return
+
+        self._originator.restore(self._mementos.pop())
+
 
 
 img = ImageEditor('monkey.jpeg', 1920, 1080)
-saved_img = img.save_state()
-print(img.__dict__)
-print(saved_img.get_state())
-img.name = 'dog.jpeg'
-print(img.__dict__)
-img.restore(saved_img)
-print(img.__dict__)
+print(img)
+caretaker = Caretaker(img)
+caretaker.backup()
+
+img.name = 'lion.jpeg'
+print(img)
+caretaker.backup()
+
+img.name = 'fish.jpeg'
+print(img)
+caretaker.backup()
+
+caretaker.restore()
+print(img)
+
+caretaker.restore()
+print(img)
+
+caretaker.restore()
+print(img)
+caretaker.restore()
+print(img)
+caretaker.restore()
+print(img)
+caretaker.restore()
+print(img)
