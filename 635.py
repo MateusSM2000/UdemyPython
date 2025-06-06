@@ -1,5 +1,5 @@
 #basicamente esse padrao de projeto decorator serve pra vc guardar estados de um objeto, no qual um
-# objeto de outra classe recebe uma copia do objeto principal, podendo o alterar sem alterar as copias
+# objeto de outra classe recebe um hard copy do objeto principal, podendo o alterar sem alterar as copias
 
 
 from __future__ import annotations
