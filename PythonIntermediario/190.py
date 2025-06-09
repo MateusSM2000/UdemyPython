@@ -18,7 +18,7 @@ pessoa = {
 
 #ensure_ascii desabilita o ascii e deixa rodar o encoding q quiser
 #indent formata visualmente em linhas no arquivo a fim de melhor visualização
-with open('190.json','w+', encoding= 'utf8') as arquivo:
+with open('190.json', 'w+', encoding='utf8') as arquivo:
     json.dump(pessoa, arquivo, ensure_ascii= False, indent= 2)
     arquivo.seek(0,0)
     pessoa = json.load(arquivo)

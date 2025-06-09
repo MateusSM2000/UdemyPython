@@ -5,7 +5,7 @@ class Pessoa:
         self.nome = nome
         self.idade = idade
 
-with open('206.json','r',encoding='utf8') as arquivo:
+with open('206.json', 'r', encoding='utf8') as arquivo:
     pessoas = json.load(arquivo)
     print(pessoas)
     print()

@@ -6,7 +6,7 @@ from readchar import readchar
 from os import system as os_system
 from platform import system as pf_system
 from pathlib import Path
-import classes, string, datetime, csv, socket
+import classes, datetime, csv, socket
 
 def get_local_ip() -> str:
     try:
