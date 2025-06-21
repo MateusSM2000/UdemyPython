@@ -934,83 +934,83 @@ base\\_de\\_dados|schema||usuario||UPDATE|G</Grants>
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-06-20.02:30:42</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-06-20.16:47:21</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <user id="291" parent="1" name="usuario"/>
-    <table id="292" parent="290" name="roles">
+    <table id="292" parent="290" name="profiles">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="293" parent="290" name="users">
+    <table id="293" parent="290" name="roles">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="294" parent="290" name="users_roles">
+    <table id="294" parent="290" name="users">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <column id="295" parent="292" name="id">
+    <table id="295" parent="290" name="users_roles">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="296" parent="292" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int unsigned|0s</StoredType>
     </column>
-    <column id="296" parent="292" name="name">
+    <column id="297" parent="292" name="bio">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>varchar(150)|0s</StoredType>
+      <StoredType>text|0s</StoredType>
     </column>
-    <index id="297" parent="292" name="PRIMARY">
+    <column id="298" parent="292" name="user_id">
+      <Position>3</Position>
+      <StoredType>int unsigned|0s</StoredType>
+    </column>
+    <foreign-key id="299" parent="292" name="users_id_fk">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="300" parent="292" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="298" parent="292" name="PRIMARY">
+    <index id="301" parent="292" name="user_id">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="302" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="299" parent="293" name="id">
-      <AutoIncrement>9</AutoIncrement>
+    <key id="303" parent="292" name="user_id">
+      <UnderlyingIndexName>user_id</UnderlyingIndexName>
+    </key>
+    <column id="304" parent="293" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int unsigned|0s</StoredType>
     </column>
-    <column id="300" parent="293" name="first_name">
+    <column id="305" parent="293" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
+      <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="301" parent="293" name="last_name">
-      <Position>3</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="302" parent="293" name="email">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(250)|0s</StoredType>
-    </column>
-    <column id="303" parent="293" name="password_hash">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(255)|0s</StoredType>
-    </column>
-    <index id="304" parent="293" name="PRIMARY">
+    <index id="306" parent="293" name="PRIMARY">
       <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="305" parent="293" name="email">
-      <ColNames>email</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="306" parent="293" name="password_hash">
-      <ColNames>password_hash</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
@@ -1019,47 +1019,114 @@ base\\_de\\_dados|schema||usuario||UPDATE|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="308" parent="293" name="email">
-      <UnderlyingIndexName>email</UnderlyingIndexName>
-    </key>
-    <key id="309" parent="293" name="password_hash">
-      <UnderlyingIndexName>password_hash</UnderlyingIndexName>
-    </key>
-    <column id="310" parent="294" name="user_id">
+    <column id="308" parent="294" name="id">
+      <AutoIncrement>9</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int unsigned|0s</StoredType>
     </column>
-    <column id="311" parent="294" name="role_id">
+    <column id="309" parent="294" name="first_name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="310" parent="294" name="last_name">
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="311" parent="294" name="email">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(250)|0s</StoredType>
+    </column>
+    <column id="312" parent="294" name="password_hash">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="313" parent="294" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>datetime|0s</StoredType>
+    </column>
+    <column id="314" parent="294" name="updated_at">
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>7</Position>
+      <StoredType>datetime|0s</StoredType>
+    </column>
+    <index id="315" parent="294" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="316" parent="294" name="email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="317" parent="294" name="password_hash">
+      <ColNames>password_hash</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="318" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="319" parent="294" name="email">
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <key id="320" parent="294" name="password_hash">
+      <UnderlyingIndexName>password_hash</UnderlyingIndexName>
+    </key>
+    <column id="321" parent="295" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int unsigned|0s</StoredType>
+    </column>
+    <column id="322" parent="295" name="role_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int unsigned|0s</StoredType>
     </column>
-    <foreign-key id="312" parent="294" name="users_fk">
+    <column id="323" parent="295" name="created_at">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>datetime|0s</StoredType>
+    </column>
+    <column id="324" parent="295" name="updated_at">
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>4</Position>
+      <StoredType>datetime|0s</StoredType>
+    </column>
+    <foreign-key id="325" parent="295" name="users_fk">
       <ColNames>user_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>users</RefTableName>
     </foreign-key>
-    <foreign-key id="313" parent="294" name="roles_fk">
+    <foreign-key id="326" parent="295" name="roles_fk">
       <ColNames>role_id</ColNames>
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id</RefColNames>
       <RefTableName>roles</RefTableName>
     </foreign-key>
-    <index id="314" parent="294" name="PRIMARY">
+    <index id="327" parent="295" name="PRIMARY">
       <ColNames>role_id
 user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="315" parent="294" name="users_fk">
+    <index id="328" parent="295" name="users_fk">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="316" parent="294" name="PRIMARY">
+    <key id="329" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
