@@ -10,6 +10,11 @@
         body {
             font-family: sans-serif;
         }
+
+        label {
+            cursor: pointer;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -21,7 +26,60 @@
             <fieldset>
                 <legend>Descrição</legend>
                 <p>
-                    <input type="text">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" value="Mateus Schmidt Mesquita" required>
+                </p>
+
+                <p>
+                    <label for="dev">Sou um dev</label>
+                    <input type="checkbox" id="dev" name="dev" value="sim" checked>
+
+                    <label for="limeira">Moro em limeira</label>
+                    <input type="checkbox" id="limeira" name="limeira" value="sim" checked>
+
+                    <label for="empreendedor">Sou empreendedor</label>
+                    <input type="checkbox" id="empreendedor" name="empreendedor" value="sim" checked>
+                </p>
+
+                <p>
+                    Gênero:
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="feminino" name="genero" value="feminino">
+
+                    <label for="nao-declarar">Prefiro não declarar</label>
+                    <input type="radio" id="nao-declarar" name="genero" value="nao_declarado">
+                </p>
+
+                <p>
+                <button type="submit">Enviar</button>
+                <button type="reset">Reescrever</button>
+                </p>
+            </fieldset>
+        </section>
+
+        <section>
+            <h1>Heading 1</h1>
+            <p>Formulário</p>
+
+            <fieldset>
+                <legend>Descrição</legend>
+                <p>
+                    <input type="text" id="nome2" name="nome" placeholder="Seu nome" disabled>
+                </p>
+            </fieldset>
+        </section>
+
+        <section>
+            <h1>Heading 1</h1>
+            <p>Formulário</p>
+
+            <fieldset>
+                <legend>Descrição</legend>
+                <p>
+                    <input type="text" id="nome3" name="nome" placeholder="Seu nome" readonly>
                 </p>
             </fieldset>
         </section>
