@@ -54,6 +54,85 @@
                 </p>
 
                 <p>
+                    <label for="data-nascimento">Data de nascimento:</label>
+                    <input type="date" id="data-nascimento" name="data_nascimento" value="2025-07-11" required>
+                </p>
+
+                <p>
+                    <label for="data">Data:</label>
+                    <input type="datetime-local" id="data" name="data" value="2025-07-11T20:00:55" required>
+                </p>
+
+                <p>
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" value="20:00:47" required>
+                </p>
+
+                <p>
+                    <label for="cor">Cor:</label>
+                    <input type="color" id="cor" name="cor" value="#FF0000">
+                </p>
+
+                <p>
+                    <label for="e-mail">E-mail:</label>
+                    <input type="email" id="e-mail" name="email" placeholder="ex@email.com" required>
+                </p>
+
+                <p>
+                    <label for="arquivo">Arquivo:</label>
+                    <input type="file" id="arquivo" name="arquivo" accept=".png" multiple>
+                </p>
+
+                <p>
+                    <label for="numero">Número:</label>
+                    <input type="number" id="numero" name="numero" placeholder="Insira um número" min="10" max="50" step="5" required>
+                </p>
+
+                <p>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+                </p>
+
+                <p>
+                    <label for="range">Range:</label>
+                    <input type="range" id="range" name="range" max="10" min="0" step="2">
+                </p>
+
+                <p>
+                    <label for="url">URL:</label>
+                    <input type="url" id="url" name="url" placeholder="www.example.com">
+                </p>
+
+                <p>
+                    <label for="search">Search (para SEO):</label>
+                    <input type="search" id="search" name="search" placeholder="usado para SEO">
+                </p>
+
+                <p>
+                    <label for="select">Selecione uma opção:</label>
+                    <select id="select" name="select" multiple>
+                        <optgroup label="Grupo 1">
+                            <option value="valor q retorna 1" disabled>Valor q aparece pra escolher 1</option>
+                            <option value="valor q retorna 2">Valor q aparece pra escolher 2</option>
+                            <option value="valor q retorna 3" selected>Valor q aparece pra escolher 3</option>
+                            <option value="valor q retorna 4">Valor q aparece pra escolher 4</option>
+                        </optgroup>
+
+                        <optgroup label="Grupo 2">
+                            <option value="valor q retorna 5" disabled>Valor q aparece pra escolher 5</option>
+                            <option value="valor q retorna 6">Valor q aparece pra escolher 6</option>
+                            <option value="valor q retorna 7">Valor q aparece pra escolher 7</option>
+                            <option value="valor q retorna 8">Valor q aparece pra escolher 8</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="text-area">text-area:</label>
+                    <textarea id="text-area" name="textarea" rows="8" cols="5" placeholder="placeholder">Texto default</textarea>
+                </p>
+
+                <p>
                 <button type="submit">Enviar</button>
                 <button type="reset">Reescrever</button>
                 </p>
