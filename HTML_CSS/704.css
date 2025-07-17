@@ -1,0 +1,27 @@
+* {
+    margin: 2rem;
+}
+
+body div p {
+    color: red;
+}
+
+body p, h1 {
+    color: violet;
+}
+
+.div h1 {
+    color: green;
+}
+
+div.div h2.heading-2 {
+    color: aqua;
+}
+
+.div.div2 {
+    background: red;
+}
+
+.pai > .filha:first-line {
+    color: gold;
+}
