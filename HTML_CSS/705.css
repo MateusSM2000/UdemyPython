@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pai h1+p {
+    color: red;
+}
+
+.pai p+h1 {
+    color: violet;
+}
+
+.pai h2~p {
+    color: green;
+}
+
+.pai2 .um~.dois {
+    color: brown;
+}
+
+[meu-atributo] {
+    color: blue;
+}
+
+[meu-atributo="valor"] {
+    color: salmon;
+}
+
+[meu-atributo~="valor2"] {
+    color: darkmagenta;
+}
+
+[meu-atributo^="ab"] {
+    color: darkgoldenrod;
+}
+
+[meu-atributo$="fg"] {
+    color: darkolivegreen;
+}
+
+[meu-atributo*="ijk"] {
+    color: darkblue;
+}
