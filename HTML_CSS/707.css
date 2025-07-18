@@ -1,0 +1,51 @@
+.hover {
+    transition: all 1s ease-in-out;
+}
+
+.hover:hover {
+    background: red;
+}
+
+a:link {
+    color: darkgreen;
+}
+
+a:visited {
+    color: darkorchid;
+}
+
+a:active {
+    color: chocolate;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled {
+    background: red;
+    cursor: not-allowed;
+}
+
+input:required {
+    background: gold;
+}
+
+input:checked {
+    width: 2rem;
+    height: 2rem;
+}
+
+input:checked + p {
+    background: red;
+}
+
+.pai .lista li:first-child {
+    background: darkgreen;
+}
+
+.pai .lista li:last-child {
+    background: gold;
+}
