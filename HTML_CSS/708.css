@@ -1,0 +1,11 @@
+input:checked + p {
+    color: gold;
+}
+
+input:not(:checked) + p {
+    background: black;
+}
+
+p:not(.paragrafo-not) {
+    color: red;
+}
