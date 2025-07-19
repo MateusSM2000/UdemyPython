@@ -1,0 +1,30 @@
+.ul1 li::after {
+    content: ' - ';
+    background: red;
+}
+
+.ul2 li::before {
+    content: ' - ';
+    background: red;
+}
+
+.p1::first-letter {
+    font-size: 3rem;
+}
+
+.p2::first-line {
+    background: red;
+}
+
+.p2::selection {
+    background: black;
+    color: gold;
+}
+
+input::placeholder {
+    background: red;
+}
+
+.placeholder::placeholder {
+    color: white;
+}
