@@ -1,0 +1,19 @@
+.ul1 li:nth-child(even) {
+    background: red;
+}
+
+.ul1 li:nth-child(odd) {
+    background: gold;
+}
+
+.ul2 li:nth-child(5) {
+    background: aqua;
+}
+
+.ul3 li:nth-child(3n) {
+    background: darkcyan;
+}
+
+.ul4 li:nth-child(3n+2) {
+    background: orange;
+}
