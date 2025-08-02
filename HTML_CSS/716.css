@@ -1,0 +1,50 @@
+html {
+    font-size: 62.5%;  /* dessa maneira 1rem tem 10px e respeita mudanças de fonte pelo navegador (por padrao o html vem com 16px)*/
+    scroll-behavior: smooth !important /* n tá funcioanndo aki no meu navegador */;
+}
+
+.pai {
+    font-size: 50px;
+    background: gold;
+}
+
+.p1 {
+    font-size: 0.5em; /* é multiplicado pelo elemento pai */
+}
+
+.p2 {
+    font-size: 1rem; /* é multiplicado pelo elemento root, q é o html */
+}
+
+.div1 {
+    width: 50vw; /* % da largura do viewport (area visível atual do navegador, sem levar em conta se dá pra scrollar ou n) */
+    height: 10vh; /* % da altura do viewport (area visível atual do navegador, sem levar em conta se dá pra scrollar ou n) */
+    background: red;
+}
+
+.div2 {
+    background: blue;
+    width: 100vw;
+    height: 100vh;
+}
+
+.div3 {
+    background: yellow;
+    width: 100vw;
+    height: 100vh;
+}
+
+a {
+    font-size: 2.5rem;
+}
+
+.div4 {
+    background: blueviolet;
+    width: 50%; /* em relação ao elemento pai */
+    height: 10rem;
+}
+
+/* vmin é relacionado a dimensao do viewport q se encontra como a menor, enquanto q o vmax é ao maior
+   cada unidade deles representa em 1% da dimensão q eles estão se baseando
+   mais útil para mobile
+*/
