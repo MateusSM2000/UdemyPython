@@ -1,3 +1,4 @@
+-- limit limita a busca
 -- offset x desloca o valor inicial de um range em x unidades
 
 select * from users;
