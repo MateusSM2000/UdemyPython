@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+}
+
+.filha-1, .filha-2, .filha-3, .filha-4 {
+    margin: 1rem;
+    width: 20rem;
+    height: 20rem;
+    background: red;
+}
+
+.filha-2 {
+    background: yellow;
+}
+
+.filha-4 {
+    background: yellow;
+    position: relative; /* em relação ao elemento mais próximo */
+    top: 8rem;
+}
+
+.p-1 {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+}
+
+.filha-1 {
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+    z-index: 2;
+}
+
+.filha-3 {
+    background: blue;
+    position: absolute; /* em relação ao viewport ou ao elemento no qual tá inserido */
+    top: 10rem;
+    left: 10rem;
+    z-index: 1;
+}
+
+.pai-3 {
+    position: absolute;
+    background: purple;
+    width: 20rem;
+    height: 20rem;
+    top: 50%;
+    left: 50%;
+    margin-left: -10rem;
+    margin-top: -10rem;
+    z-index: 3;
+}
+
+.pai-4 {
+    background: green;
+    width: 10rem;
+    height: 10rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.pai-5 {
+    width: 20rem;
+    height: 10rem;
+    background: lightblue;
+    margin: 20rem 0 2rem 2rem;
+    overflow-y: auto;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background: gray;
+}
