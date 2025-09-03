@@ -1,0 +1,1 @@
+select u.id, p.id, bio, first_name from users as u left join profiles as p on u.id = p.user_id;
