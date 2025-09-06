@@ -38,7 +38,7 @@ limit 1;
 -- 7
 select u.id, u.first_name, ur.user_id, ur.role_id, r.name as role_name
 from users as u
-    left join users_roles as ur on u.id = ur.user_id
+    inner join users_roles as ur on u.id = ur.user_id
     inner join roles as r on r.id = ur.role_id
 where r.name = 'PUT'
 order by rand()
@@ -48,7 +48,7 @@ delete from users as u
 where id in (
     select u.id, u.first_name, ur.user_id, ur.role_id, r.name as role_name
     from users as u
-        left join users_roles as ur on u.id = ur.user_id
+        inner join users_roles as ur on u.id = ur.user_id
         inner join roles as r on r.id = ur.role_id
     where r.name = 'PUT'
     order by rand()
