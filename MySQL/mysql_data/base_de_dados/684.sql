@@ -56,4 +56,25 @@ where id in (
 );
 
 -- 8
-select u.id, u.first_name,
+select u.id, u.first_name, p.bio, p.user_id, ur.user_id, r.name as role_name
+from users as u
+inner join profiles as p on u.id = p.user_id
+inner join users_roles as ur on u.id = ur.user_id
+inner join roles as r on r.id = ur.role_id
+order by u.id;
+
+-- 9
+select u.id, u.first_name, p.bio, p.user_id, ur.user_id, r.name as role_name
+from users as u
+left join profiles as p on u.id = p.user_id
+left join users_roles as ur on u.id = ur.user_id
+left join roles as r on r.id = ur.role_id
+order by u.id;
+
+-- 10
+select u.id, u.first_name, p.bio, p.user_id, ur.user_id, r.name as role_name, u.salary
+from users as u
+inner join profiles as p on u.id = p.user_id
+inner join users_roles as ur on u.id = ur.user_id
+inner join roles as r on r.id = ur.role_id
+order by u.salary desc;
