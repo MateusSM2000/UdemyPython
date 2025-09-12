@@ -1,0 +1,12 @@
+div {
+    box-sizing: border-box;
+    width: 20rem;
+    height: 20rem;
+    background: red;
+    box-shadow: 1rem -1rem 1rem 1rem blue;
+}
+
+.div-2 {
+    box-shadow: inset 1rem -1rem 1rem 1rem blue,
+    2rem 2rem 2rem rgba(0,0,0,.5);
+}
