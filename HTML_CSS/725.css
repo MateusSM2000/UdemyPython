@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background: yellow;
+    height: 40rem;
+    margin: 1rem;
+    flex-wrap: wrap;
+    align-content: flex-start;  /* stretch   center   flex-start    flex-end    space-around  space-evenly  space-between */
+}
+
+.flex-item {
+    background: red;
+    width: 33.33%;
+}
