@@ -1,0 +1,2 @@
+select u.id, p.id, p.bio, p.user_id from users as u right join profiles as p on u.id = p.user_id;
+/* nesse caso n vai dar diferença com o inner join pq n tem profiles sem users. e se deletar user vai deletar seu profile tbm por conta do on delete cascade
